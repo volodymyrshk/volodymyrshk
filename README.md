@@ -4,7 +4,7 @@
 
 I build payment and API integrations, work through production failures, and test AI agents and the tools they call. My background includes full-stack fintech delivery, 30+ external APIs across client projects, and adversarial AI evaluation work.
 
-Open to remote backend, integrations and product engineering roles, and B2B contracts through **USK Group LLC**. Based in Romania; open to working across time zones.
+Open to remote opportunities in backend engineering, systems integration, and product development, including contract engagements and long-term collaborations. Particularly interested in complex technical challenges, production systems, and reliability-focused engineering.
 
 [Portfolio](https://volodymyr.space) · [Recent engineering work](https://volodymyr.space/work/integration-reliability) · [LinkedIn](https://www.linkedin.com/in/volodymyr-shkarban/) · [Email](mailto:volodymir.shkarban@gmail.com)
 
