@@ -1,42 +1,44 @@
 ### Volodymyr Shkarban
 
-**Backend & integrations engineer · TypeScript, Node.js, PostgreSQL · AI-agent security**
+**Full-stack & integration engineer · payments, APIs and AI agents that hold up in production**
 
-I build payment and API integrations, work through production failures, and test AI agents and the tools they call. My background includes full-stack fintech delivery, 30+ external APIs across client projects, and adversarial AI evaluation work.
+I build the parts of software that have to be right: the payment that must not be charged twice, the API that times out halfway through a sync, the agent that must not write the wrong record. Most recently: Stripe Connect payments and 30+ data-provider integrations at a U.S. fintech startup. On the side, I find and fix the things that break AI tooling.
 
-Open to remote opportunities in backend engineering, systems integration, and product development, including contract engagements and long-term collaborations. Particularly interested in complex technical challenges, production systems, and reliability-focused engineering.
+[Portfolio](https://volodymyr.space) · [LinkedIn](https://www.linkedin.com/in/volodymyr-shkarban/) · [Email](mailto:volodymir.shkarban@gmail.com) · [Book a call](https://calendly.com/volodymir-shkarban/30min)
 
-[Portfolio](https://volodymyr.space) · [Recent engineering work](https://volodymyr.space/work/integration-reliability) · [LinkedIn](https://www.linkedin.com/in/volodymyr-shkarban/) · [Email](mailto:volodymir.shkarban@gmail.com)
+#### Highlights
 
-#### Recent public engineering work
+- 🔐 **[CVE-2026-95854](https://github.com/CircleCI-Public/mcp-server-circleci/security/advisories/GHSA-8xjg-jpfh-5257)**, CircleCI's MCP server: pipeline tools that could re-run or roll back production were missing their destructive-action annotations. Fixed in 0.18.0. [Write-up](https://volodymyr.space/writing/circleci-mcp-destructive-hint)
+- 🧭 **Coordinated disclosure to 10 MCP vendors** including Anthropic, CircleCI, Sentry, MongoDB, Vercel and Shopify. [Methods and outcomes](https://volodymyr.space/writing/ten-mcp-vendor-disclosures)
+- 🛠️ **Fixes ahead of vendor shutdown dates** for LiteLLM, n8n, Dify, E2B, Continue and LibreChat, so these projects keep working when OpenAI, Anthropic and Langfuse retire models and APIs.
 
-Status checked **18 October 2026**. These are **open PRs**, not merged contributions. Each PR records its validation and outstanding checks.
+#### Code you can run
 
-| Project | Proposed change |
+| Repo | What it shows |
 | --- | --- |
-| [Supabase Wrappers #665](https://github.com/supabase/wrappers/pull/665) | Move the Langfuse data wrapper to Observations API v2; document table and cost semantics, encode query parameters, and improve migration errors. |
-| [LibreChat #17217](https://github.com/LibreChat-AI/LibreChat/pull/17217) | Check Langfuse credentials on the OTLP export path instead of the legacy ingestion endpoint. |
-| [Sim #9187](https://github.com/simstudioai/sim/pull/9187) | Migrate Cloudflare DNS analytics to GraphQL, map existing output fields, and reject unsupported measurements explicitly. |
-| [Hive #7506](https://github.com/aden-hive/hive/pull/7506) | Adapt the Cloudflare analytics tool to GraphQL with date/limit validation and error handling. Maintainer assignment permission remains unresolved. |
-| [LiteLLM #47219](https://github.com/BerriAI/litellm/pull/47219) | Add a provider-scoped, once-per-process API retirement warning without changing request behavior. |
-| [Kestra #19659](https://github.com/kestra-io/kestra/pull/19659) | Optional webhook HMAC validation on the original request bytes; 61 focused tests reported passing. |
+| **[agent-reconciliation-harness](https://github.com/volodymyrshk/agent-reconciliation-harness)** | An AI agent that writes to a system of record safely: rules first, model output validated against what it was shown, a policy gate, a crash-safe outbox that never writes twice, and a golden-dataset eval of model configurations. |
+| **[github-push-reconciler](https://github.com/volodymyrshk/github-push-reconciler)** | Signed webhook receiver, coalescing worker and reconciler, so every deployed repo converges to its latest push even when webhooks go missing. |
+| **[redaction-safe-sync](https://github.com/volodymyrshk/redaction-safe-sync)** | A sync model for providers that hide secret values: a value you can't read can never erase one you have. Property-tested. |
+| **[stripeprocessing](https://github.com/volodymyrshk/stripeprocessing)** | Stripe webhooks into PostgreSQL and a CRM, with Redis idempotency and retries. |
 
-#### Code you can inspect
+Each one has tests that were checked by breaking the code on purpose.
 
-- **[redaction-safe-sync](https://github.com/volodymyrshk/redaction-safe-sync)**: TypeScript reference for providers that hide secret values. Five explicit states, versioned writes, restore safeguards and property tests. In-memory reference, not a production library.
-- **[github-push-reconciler](https://github.com/volodymyrshk/github-push-reconciler)**: signed webhook receiver, coalescing worker and reconciler for missed or out-of-order deliveries. Tested reference; its simulation is not a production benchmark.
-- **[stripeprocessing](https://github.com/volodymyrshk/stripeprocessing)**: Stripe webhooks, Redis idempotency, PostgreSQL and CRM sync with retries. Public sample adapted from client work.
+#### Open-source contributions (October 2026, in review)
 
-#### Security & evaluation
-
-- **CVE-2026-95854, CircleCI MCP server.** Reported missing `destructiveHint` annotations on pipeline tools; fixed in 0.18.0. [Public advisory](https://github.com/CircleCI-Public/mcp-server-circleci/security/advisories/GHSA-8xjg-jpfh-5257) · [Write-up](https://volodymyr.space/writing/circleci-mcp-destructive-hint)
-- **Coordinated disclosures to 10 MCP server vendors** in April 2026. One became the CircleCI CVE; the reports do not imply ten confirmed vulnerabilities. [Methods and outcomes](https://volodymyr.space/writing/ten-mcp-vendor-disclosures)
-- **Gerfach:** TypeScript agent-security scanner with 39 audit modules and JSON/SARIF output. [Controlled case study](https://volodymyr.space/work/gerfach)
-- **AI safety contract:** about 70 adversarial evaluation tasks with reference solutions, covering injection, authorization and unsafe tool execution. Client identity confidential.
-- **Across the Protocol Stack:** co-authored with Oleksandr Leontiev; manuscript on 424 AI-agent tool endpoints across six protocols. Not yet peer reviewed.
+| Project | Change |
+| --- | --- |
+| [Kestra #19659](https://github.com/kestra-io/kestra/pull/19659) | HMAC signature validation for webhook triggers, verified on the original request bytes (feature assigned by maintainers). |
+| [LiteLLM #47219](https://github.com/BerriAI/litellm/pull/47219) | Warn once per process before OpenAI shuts down the Evals API on 2026-11-30. |
+| [n8n #41337](https://github.com/n8n-io/n8n/pull/41337) | Move the AI Workflow Builder off a Claude model retiring on 2026-11-30. |
+| [Dify #44282](https://github.com/langgenius/dify/pull/44282) | Remove shut-down OpenAI and Anthropic models from hosted defaults. |
+| [E2B Fragments #256](https://github.com/e2b-dev/fragments/pull/256) · [AI Analyst #43](https://github.com/e2b-dev/ai-analyst/pull/43) | Drop OpenAI models shut down on 2026-10-23 and move defaults to a supported Claude model. |
+| [Continue #13397](https://github.com/continuedev/continue/pull/13397) | Use an active Claude model in the new-assistant config example. |
+| [LibreChat #17217](https://github.com/LibreChat-AI/LibreChat/pull/17217) | Verify Langfuse keys against the OTLP endpoint that Langfuse v4 keeps. |
+| [Supabase Wrappers #665](https://github.com/supabase/wrappers/pull/665) | Move the Langfuse foreign data wrapper to Observations API v2. |
+| [Aden Hive #7506](https://github.com/aden-hive/hive/pull/7506) | Move the Cloudflare DNS analytics tool to the GraphQL Analytics API. |
 
 #### Stack
 
-TypeScript, Node.js, React, Next.js · Python, FastAPI · PostgreSQL, Redis · AWS, Docker, Linux, Nginx · MCP, LangChain, LangGraph
+TypeScript · Node.js · React · Next.js · Python · FastAPI · PostgreSQL · Redis · Stripe · AWS · Docker · Claude & OpenAI APIs · MCP
 
-For a role or project, send the product, scope and compensation range to [volodymir.shkarban@gmail.com](mailto:volodymir.shkarban@gmail.com), or [book a conversation](https://calendly.com/volodymir-shkarban/30min).
+Open to remote full-time and contract work. Send the product, scope and range to [volodymir.shkarban@gmail.com](mailto:volodymir.shkarban@gmail.com).
