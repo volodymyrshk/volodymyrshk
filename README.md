@@ -21,9 +21,9 @@ I build the parts of software that have to be right: the payment that must not b
 | **[redaction-safe-sync](https://github.com/volodymyrshk/redaction-safe-sync)** | A sync model for providers that hide secret values: a value you can't read can never erase one you have. Property-tested. |
 | **[stripeprocessing](https://github.com/volodymyrshk/stripeprocessing)** | Stripe webhooks into PostgreSQL and a CRM, with Redis idempotency and retries. |
 
-Each one has tests that were checked by breaking the code on purpose.
+Each one runs its tests in CI, and the tests were checked by breaking the code on purpose.
 
-#### Open-source contributions (October 2026, in review)
+#### Open-source contributions (October 2026, open PRs, not merged yet)
 
 | Project | Change |
 | --- | --- |
@@ -35,7 +35,6 @@ Each one has tests that were checked by breaking the code on purpose.
 | [Continue #13397](https://github.com/continuedev/continue/pull/13397) | Use an active Claude model in the new-assistant config example. |
 | [LibreChat #17217](https://github.com/LibreChat-AI/LibreChat/pull/17217) | Verify Langfuse keys against the OTLP endpoint that Langfuse v4 keeps. |
 | [Supabase Wrappers #665](https://github.com/supabase/wrappers/pull/665) | Move the Langfuse foreign data wrapper to Observations API v2. |
-| [Aden Hive #7506](https://github.com/aden-hive/hive/pull/7506) | Move the Cloudflare DNS analytics tool to the GraphQL Analytics API. |
 
 #### Stack
 
