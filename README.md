@@ -21,7 +21,7 @@ I build the parts of software that have to be right: the payment that must not b
 | **[redaction-safe-sync](https://github.com/volodymyrshk/redaction-safe-sync)** | A sync model for providers that hide secret values: a value you can't read can never erase one you have. Property-tested. |
 | **[stripeprocessing](https://github.com/volodymyrshk/stripeprocessing)** | Stripe webhooks into PostgreSQL and a CRM, with Redis idempotency and retries. |
 
-Each one runs its tests in CI, and the tests were checked by breaking the code on purpose.
+Each one has tests that were checked by breaking the code on purpose.
 
 #### Open-source contributions (October 2026, open PRs, not merged yet)
 
