@@ -4,7 +4,7 @@
 
 I build payment workflows and API integrations, and test what happens when they fail: duplicate events, timeouts after a write, missed webhooks and revoked access. My AI work focuses on agent security and adversarial evaluation.
 
-3+ years building production software, following a year in production operations. Recent contracts covered B2B fintech delivery with Stripe/Adyen and approximately 70 AI-safety evaluation tasks. Across client projects, I have connected 30+ external APIs and data providers.
+4 years in software, the last 3+ building production systems. Recent contracts covered B2B fintech delivery with Stripe/Adyen and approximately 70 AI-safety evaluation tasks.
 
 **Open to remote engineering roles and contracts.** [Email me](mailto:volodymir.shkarban@gmail.com) · [Portfolio](https://volodymyr.space) · [LinkedIn](https://www.linkedin.com/in/volodymyr-shkarban-a1033939b/) · [Book a call](https://calendly.com/volodymir-shkarban/30min)
 
