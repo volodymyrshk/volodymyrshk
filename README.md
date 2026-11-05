@@ -20,6 +20,10 @@ These are independent reference implementations with explicit limits. Each runs 
 
 ## Work accepted upstream
 
+- **[OpenTelemetry JS #7259](https://github.com/open-telemetry/opentelemetry-js/pull/7259), merged 5 November 2026, released in 3.1.0 / 0.301.0.** Found that the 0.300 OTLP exporters and instrumentations failed to load as ESM with `@opentelemetry/api` 1.9 ([#7258](https://github.com/open-telemetry/opentelemetry-js/issues/7258), p1), measured which packages were affected, and opened the fix; the maintainers extended it to the remaining packages. A matching fix followed in the contrib repo ([#3883](https://github.com/open-telemetry/opentelemetry-js-contrib/pull/3883)). Affected packages include `@opentelemetry/instrumentation`, about 145M npm downloads a week.
+- **[Kestra #19659](https://github.com/kestra-io/kestra/pull/19659), merged 4 November 2026 and backported to the 2.0 branch.** Built HMAC signature validation for the Webhook trigger, as requested in [#18286](https://github.com/kestra-io/kestra/issues/18286) (+624 lines).
+- **[Langfuse JS #1077](https://github.com/langfuse/langfuse-js/pull/1077), merged 2 November 2026, released in `@langfuse/otel` 6.1.1.** Fresh installs broke after OpenTelemetry JS 3.0; capped the exporter peer ranges so they keep working (about 4.1M npm downloads a week).
+- **[ckanext-files #15](https://github.com/DataShades/ckanext-files/pull/15), merged 29 October 2026.** Fixed CI, added CKAN 2.12 to the test matrix, and fixed the to-core-files migration (transfer history, re-runs).
 - **[E2B AI Analyst #43](https://github.com/e2b-dev/ai-analyst/pull/43), merged 20 October 2026.** Updated the model catalogue and default, accounting for the existing SDK's temperature behavior.
 - **[CircleCI security advisory · CVE-2026-95854](https://github.com/CircleCI-Public/mcp-server-circleci/security/advisories/GHSA-8xjg-jpfh-5257).** Reported missing destructive-action annotations in the MCP server; fixed in 0.18.0. [Technical write-up](https://volodymyr.space/writing/circleci-mcp-destructive-hint).
 
@@ -27,6 +31,6 @@ These are independent reference implementations with explicit limits. Each runs 
 
 ## Engineering focus
 
-**Backend:** TypeScript, Node.js, Python, PostgreSQL, Redis · **Product:** React, Next.js · **Delivery:** APIs, Stripe/Adyen, Docker, AWS · **AI:** evaluations, tool authorization, MCP security.
+**Backend:** TypeScript, Node.js, Python, Go, Java, PostgreSQL, Redis · **Observability:** OpenTelemetry JS, Langfuse · **Product:** React, Next.js · **Delivery:** APIs, Stripe/Adyen, Docker, AWS · **AI:** evaluations, tool authorization, MCP security.
 
 Bachelor's degree in Applied Mathematics, National Aviation University, Kyiv (2026). English C2; Ukrainian and Russian native; German B2–C1.
