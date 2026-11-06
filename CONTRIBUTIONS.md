@@ -1,34 +1,32 @@
 # Public contributions
 
-Status checked against GitHub on **21 October 2026**. A merged change, an open proposal and a closed proposal are different outcomes. Follow each link for the current discussion.
+Status checked on **7 November 2026**. Merged changes, open proposals and closed work are different outcomes. Follow each link for the current discussion and scope.
 
 ## Merged
 
-| Project | Change | Accepted |
+| Project | Change | Merged |
 | --- | --- | --- |
-| [e2b-dev/ai-analyst #43](https://github.com/e2b-dev/ai-analyst/pull/43) | Model catalogue and default updated for API compatibility. | 2026-10-20 |
+| [OpenTelemetry JS #7259](https://github.com/open-telemetry/opentelemetry-js/pull/7259) | Diagnosed an API peer-version incompatibility and proposed a fix; maintainers extended it before merging. | 2026-11-05 |
+| [Kestra #19659](https://github.com/kestra-io/kestra/pull/19659) | Added HMAC signature validation for webhook triggers using original request bytes. | 2026-11-04 |
+| [Langfuse JS #1077](https://github.com/langfuse/langfuse-js/pull/1077) | Fixed fresh-install compatibility by constraining OpenTelemetry exporter peer versions. | 2026-11-02 |
+| [ckanext-files #15](https://github.com/DataShades/ckanext-files/pull/15) | Fixed CI, added CKAN 2.12 tests, and improved migration re-runs and transfer-history handling. | 2026-10-29 |
+| [E2B AI Analyst #43](https://github.com/e2b-dev/ai-analyst/pull/43) | Updated the model catalogue and default for API compatibility. | 2026-10-20 |
 
-## Open for review
+## Open proposals
 
 | Project | Proposed change |
 | --- | --- |
-| [e2b-dev/fragments #256](https://github.com/e2b-dev/fragments/pull/256) | Update model catalogue and default. |
-| [kestra-io/kestra #19659](https://github.com/kestra-io/kestra/pull/19659) | HMAC signature validation for webhook triggers, on original request bytes. |
-| [supabase/wrappers #665](https://github.com/supabase/wrappers/pull/665) | Langfuse foreign data wrapper migration to Observations API v2. |
-| [LibreChat-AI/LibreChat #17217](https://github.com/LibreChat-AI/LibreChat/pull/17217) | Check Langfuse credentials against its OTLP export endpoint. |
-| [BerriAI/litellm #47219](https://github.com/BerriAI/litellm/pull/47219) | Scope an API retirement warning to the OpenAI provider. |
-| [n8n-io/n8n #41337](https://github.com/n8n-io/n8n/pull/41337) | Update the AI Workflow Builder model default. |
-| [langgenius/dify #44282](https://github.com/langgenius/dify/pull/44282) | Remove unavailable models from hosted defaults. |
-| [continuedev/continue #13397](https://github.com/continuedev/continue/pull/13397) | Update the model in the new-assistant configuration example. |
+| [tRPC Agent Go #2725](https://github.com/trpc-group/trpc-agent-go/pull/2725) | Add Langfuse v4 experiment support to the Go evaluation handler. Not tested against a live v4 project. |
+| [Inngest JS #1871](https://github.com/inngest/inngest-js/pull/1871) | Constrain auto-instrumentation versions to address span loss on fresh installs. |
+| [Supabase Wrappers #665](https://github.com/supabase/wrappers/pull/665) | Migrate the Langfuse foreign data wrapper to Observations API v2. |
+| [ckanext-better-stats #3](https://github.com/DataShades/ckanext-better-stats/pull/3) | Include SVG templates in the package. |
+| [E2B Fragments #256](https://github.com/e2b-dev/fragments/pull/256) | Update the model catalogue and default. |
+| [LiteLLM #47219](https://github.com/BerriAI/litellm/pull/47219) | Scope an API retirement warning to the OpenAI provider. |
+| [n8n #41337](https://github.com/n8n-io/n8n/pull/41337) | Update the AI Workflow Builder model default. |
+| [Dify #44282](https://github.com/langgenius/dify/pull/44282) | Remove unavailable models from hosted defaults. |
+| [Continue #13397](https://github.com/continuedev/continue/pull/13397) | Update the model in a new-assistant configuration example. |
 
-These are proposals, not adopted fixes. Test reports, unrun checks and maintainer requirements remain documented in the individual PRs. A model-compatibility patch does not imply production ownership of that upstream project.
-
-## Closed without merge
-
-| Project | Proposed change | Outcome |
-| --- | --- | --- |
-| [simstudioai/sim #9187](https://github.com/simstudioai/sim/pull/9187) | Cloudflare DNS analytics REST-to-GraphQL migration. | Closed; maintainer marked it superseded by #9194. This patch was not merged. |
-| [aden-hive/hive #7506](https://github.com/aden-hive/hive/pull/7506) | Cloudflare DNS analytics REST-to-GraphQL migration. | Closed without merge; not counted as an accepted contribution. |
+These are proposals, not adopted fixes. Individual PRs document testing, unrun checks and reviewer requirements.
 
 ## Security disclosure
 
