@@ -1,12 +1,31 @@
 # Volodymyr Shkarban
 
-**Backend & integrations engineer · TypeScript, Node.js, PostgreSQL**
+**Backend, integrations & observability engineer · TypeScript, Node.js, PostgreSQL, OpenTelemetry**
 
-I build payment workflows and API integrations, and I like getting to the bottom of what happens when things go wrong: duplicate events, timeouts after a write, missed webhooks and incompatible dependencies.
+I build payment workflows and API integrations, and I like getting to the bottom of what happens when things go wrong: duplicate events, timeouts after a write, missed webhooks and incompatible dependencies. Most of my recent open-source work is in observability: OpenTelemetry JS, OTLP exporters and Langfuse.
 
 In production, I've worked on Stripe and Adyen onboarding, payment reconciliation, tenant-scoped access and the APIs and data models behind a fintech platform. I also build and test AI-agent security tools and have worked on adversarial model evaluations.
 
 **Open to remote engineering roles and contracts.** [Email me](mailto:volodymir.shkarban@gmail.com) · [Portfolio](https://volodymyr.space) · [LinkedIn](https://www.linkedin.com/in/volodymyr-shkarban/) · [Book a call](https://calendly.com/volodymir-shkarban/30min)
+
+## Fields I work in
+
+| Field | What backs it today | Public code |
+| --- | --- | --- |
+| **Observability** | Merged fixes in OpenTelemetry JS (released in v3.1.0), Langfuse JS and Curie; reports on four other packages (Mastra, Phoenix, Braintrust, HyperDX) | Yes, linked below |
+| **Backend and integrations** | Stripe and Adyen onboarding and reconciliation in production; webhook and idempotency reference projects | Reference repos |
+| **AI-agent security** | CVE in CircleCI's MCP server, ten vendor disclosures, ToolSurf scanner | ToolSurf, write-ups |
+| **Infrastructure and operations** | Kubernetes, Helm, Terraform, Prometheus and Grafana used in production at a previous employer | Not yet, see below |
+| **Go and Java** | Kestra webhook feature (Java, merged); Langfuse support in tRPC Agent Go (Go, in review) | Pull requests only |
+
+## What I am building next
+
+These are plans, not results. Each one moves up when there is code or a merge to link.
+
+- **A Go component for the OpenTelemetry Collector**, with tests and measurements. No code is public yet.
+- **Deployment and failure notes for it:** Terraform against a local AWS emulator, a Helm chart tested on kind, Prometheus alerts checked with promtool, and short postmortems of failures I cause on purpose. Built from scratch and labelled that way, not a copy of systems I ran before.
+- **Reviews in opentelemetry-js**, written in my own words, starting with OTLP exporters.
+- **Langfuse v4 follow-ups** (open below), ahead of Langfuse Cloud becoming v4-only on 16 November.
 
 ## Work accepted upstream
 
