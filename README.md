@@ -15,17 +15,8 @@ In production, I've worked on Stripe and Adyen onboarding, payment reconciliatio
 | **Observability** | Merged fixes in OpenTelemetry JS (released in v3.1.0), Langfuse JS and Curie; reports on four other packages (Mastra, Phoenix, Braintrust, HyperDX) | Yes, linked below |
 | **Backend and integrations** | Stripe and Adyen onboarding and reconciliation in production; webhook and idempotency reference projects | Reference repos |
 | **AI-agent security** | CVE in CircleCI's MCP server, ten vendor disclosures, ToolSurf scanner | ToolSurf, write-ups |
-| **Infrastructure and operations** | Kubernetes, Helm, Terraform, Prometheus and Grafana used in production at a previous employer | Not yet, see below |
+| **Infrastructure and operations** | Kubernetes, Helm, Terraform, Prometheus and Grafana used in production at a previous employer | Not yet |
 | **Go and Java** | Kestra webhook feature (Java, merged); Langfuse support in tRPC Agent Go (Go, in review) | Pull requests only |
-
-## What I am building next
-
-These are plans, not results. Each one moves up when there is code or a merge to link.
-
-- **A Go component for the OpenTelemetry Collector**, with tests and measurements. No code is public yet.
-- **Deployment and failure notes for it:** Terraform against a local AWS emulator, a Helm chart tested on kind, Prometheus alerts checked with promtool, and short postmortems of failures I cause on purpose. Built from scratch and labelled that way, not a copy of systems I ran before.
-- **Reviews in opentelemetry-js**, written in my own words, starting with OTLP exporters.
-- **Langfuse v4 follow-ups** (open below), ahead of Langfuse Cloud becoming v4-only on 16 November.
 
 ## Work accepted upstream
 
@@ -68,11 +59,12 @@ These are independent reference projects, not claims of production deployment:
 
 ## Tools I work with
 
-**Backend & data:** TypeScript, Node.js, Python, PostgreSQL, Redis, REST and webhooks  
+**Languages:** TypeScript, JavaScript, Python, SQL, Go, Java  
+**Backend & data:** Node.js, PostgreSQL, Redis, REST and webhooks  
 **Payments:** Stripe Connect, Adyen, reconciliation and idempotency  
-**Observability:** OpenTelemetry JS, OTLP and Langfuse; Prometheus and Grafana from earlier production work  
-**Infrastructure:** Docker, AWS, Kubernetes, Helm and Terraform, used in production at a previous employer  
+**Observability:** OpenTelemetry, OTLP, Langfuse, Prometheus, Grafana  
+**Infrastructure:** Docker, Kubernetes, Helm, Terraform, AWS, Linux, Nginx  
 **AI & security:** MCP, tool authorization, adversarial evaluation and reproducible tests  
-**Delivery:** React, Next.js and GitHub Actions
+**Delivery:** React, Next.js, GitHub Actions, Jest, JUnit, Playwright
 
 BSc in Applied Mathematics, National Aviation University, Kyiv. English, Ukrainian, Russian and German.
